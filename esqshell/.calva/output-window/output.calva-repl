@@ -1,0 +1,70 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "Babashka" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /Users/smith/Code/esql-tools/esqshell ; bb --nrepl-server 61809 ; popd
+; Jacking in...
+; Connecting using "Babashka" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /Users/smith/Code/esql-tools/esqshell ; bb --nrepl-server 61827 ; popd
+; Using host:port 127.0.0.1:61827 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉esql꞉> 
+; clojure.lang.ExceptionInfo: Could not resolve symbol: json/read-str user /Users/smith/Code/esql-tools/esqshell/esql.clj:7:9
+clj꞉esql꞉> 
+; clojure.lang.ExceptionInfo: Could not resolve symbol: q user /Users/smith/Code/esql-tools/esqshell/esql.clj:2:120
+clj꞉esql꞉> 
+#'esql/esql
+clj꞉esql꞉> 
+; java.lang.ClassCastException: clojure.lang.Keyword cannot be cast to java.lang.String user /Users/smith/Code/esql-tools/esqshell/esql.clj:7:10
+clj꞉esql꞉> 
+nil
+clj꞉esql꞉> 
+; java.lang.ClassCastException: clojure.lang.Keyword cannot be cast to java.lang.String user /Users/smith/Code/esql-tools/esqshell/esql.clj:7:10
+clj꞉esql꞉> 
+; java.lang.ClassCastException: clojure.lang.Keyword cannot be cast to java.lang.String user /Users/smith/Code/esql-tools/esqshell/esql.clj:1:1
+clj꞉esql꞉> 
+nil
+clj꞉esql꞉> 
+; clojure.lang.ExceptionInfo: Could not resolve symbol: q user /Users/smith/Code/esql-tools/esqshell/esql.clj:1:1
+clj꞉esql꞉> 
+; java.lang.ClassCastException: clojure.lang.Keyword cannot be cast to java.lang.String user /Users/smith/Code/esql-tools/esqshell/esql.clj:1:1
+clj꞉esql꞉> 
+#'esql/esql
+clj꞉esql꞉> 
+#'esql/esql
+clj꞉esql꞉> 
+; clojure.lang.ExceptionInfo: Could not resolve symbol: q user /Users/smith/Code/esql-tools/esqshell/esql.clj:3:117
+clj꞉esql꞉> 
+#'esql/esql
+clj꞉esql꞉> 
+#'esql/esql
+clj꞉esql꞉> 
+#'esql/esql
+clj꞉esql꞉> 
+; clojure.lang.ExceptionInfo: Could not resolve symbol: e user /Users/smith/Code/esql-tools/esqshell/esql.clj:1:6
+clj꞉esql꞉> 

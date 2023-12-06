@@ -1,0 +1,49 @@
+{
+  "name": "esql-syntax-highlighting",
+  "displayName": "ES|QL Syntax Highlighting",
+  "description": "Syntax highlighting support for ES|QL",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Data Science"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "esql",
+        "aliases": [
+          "ES|QL",
+          "esql"
+        ],
+        "extensions": [
+          ".esql"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./images/elastic_logo.png",
+          "dark": "./images/elastic_logo.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "esql",
+        "scopeName": "source.esql",
+        "path": "./syntaxes/esql.tmLanguage.json"
+      },
+      {
+        "scopeName": "markdown.esql.codeblock",
+        "path": "./syntaxes/esql-markdown-codeblock.json",
+        "injectTo": [
+          "text.html.markdown"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.esql": "esql"
+        }
+      }
+    ]
+  }
+}
