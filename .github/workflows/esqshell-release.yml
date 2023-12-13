@@ -19,9 +19,4 @@ jobs:
       - name: Build
         run: ./script/build.sh ${{ matrix.os }}
       - name: Release
-        uses: tzafrirben/babashka-docker-action@v1.1
-        id: release
-        with:
-          bb_src: "script/babashka/release_artifact.clj"
-      - name: Release output
-        run: echo "${{ steps.release.outputs.bb_out }}"
+        run: ./script/babashka/release_artifact.clj
