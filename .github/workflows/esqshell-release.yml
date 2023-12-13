@@ -1,28 +1,18 @@
 on: [push]
 jobs:
-  babashka_job:
-    runs-on: ubuntu-latest
-    name: Release esqlshell
+  build_and_release_esqshell:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    name: "Build and Release esqshell on ${{ matrix.os }}"
     steps:
-      # To use a script from the repository,
-      # you must check out the repository first
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Now we can execute a babashka script from our
-      # repository
       - name: Build
-        uses: tzafrirben/babashka-docker-action@v1.1
-        id: build
-        with:
-          bb_src: 'esqshell/script/build.clj'
-      # Print the output of the babashka script from the
-      # `bb_script` step 
-      - name: Build output
-        run: echo "${{ steps.build.outputs.bb_out }}"
+        run: ./esqshell/script/build.sh ${{ matrix.os }}
       - name: Release
         uses: tzafrirben/babashka-docker-action@v1.1
         id: release
         with:
-          bb_src: 'esqshell/script/release.clj'
+          bb_src: "esqshell/script/release.clj"
       - name: Release output
         run: echo "${{ steps.release.outputs.bb_out }}"
