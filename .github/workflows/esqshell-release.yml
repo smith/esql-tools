@@ -6,6 +6,9 @@ jobs:
         os: [macos-latest, ubuntu-latest, windows-latest]
     runs-on: ubuntu-latest
     name: "Build and Release esqshell on ${{ matrix.os }}"
+    defaults:
+        run:
+          working-directory: ./esqshell
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -14,11 +17,11 @@ jobs:
         with:
           babashka-version: 0.8.156
       - name: Build
-        run: ./esqshell/script/build.sh ${{ matrix.os }}
+        run: ./script/build.sh ${{ matrix.os }}
       - name: Release
         uses: tzafrirben/babashka-docker-action@v1.1
         id: release
         with:
-          bb_src: "esqshell/script/babashka/release_artifact.clj"
+          bb_src: "script/babashka/release_artifact.clj"
       - name: Release output
         run: echo "${{ steps.release.outputs.bb_out }}"
