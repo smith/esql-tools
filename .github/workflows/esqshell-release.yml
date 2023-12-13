@@ -17,6 +17,9 @@ jobs:
         with:
           babashka-version: 0.8.156
       - name: Build
+        id: build
         run: ./script/build.sh ${{ matrix.os }}
       - name: Release
-        run: bb ./script/babashka/release_artifact.clj
+        env:
+          FILE: ${{ steps.build.outputs.FILE }}
+        run: bb ./script/babashka/release_artifact.clj $FILE

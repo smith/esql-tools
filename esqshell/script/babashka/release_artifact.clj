@@ -13,7 +13,7 @@
           :out
           str/trim)))
 
-(defn release [& args]
+(defn -main [& args]
   (let [ght (System/getenv "GITHUB_TOKEN")
         _ (println "Github token found")
         file (first args)
@@ -35,3 +35,6 @@
                                 :sha256 true}))
       (println "Skipping release artifact (no GITHUB_TOKEN or not on main branch)"))
     nil))
+
+(when (= *file* (System/getProperty "babashka.file"))
+  (apply -main *command-line-args*))
