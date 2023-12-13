@@ -19,4 +19,4 @@ jobs:
       - name: Build
         run: ./script/build.sh ${{ matrix.os }}
       - name: Release
-        run: ./script/babashka/release_artifact.clj
+        run: bb ./script/babashka/release_artifact.clj
