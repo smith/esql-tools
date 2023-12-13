@@ -9,8 +9,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Setup Babashka
+        uses: turtlequeue/setup-babashka@v1.5.0
+        with:
+          babashka-version: 0.8.156
       - name: Build
-        uses: docker://babashka/babashka
         run: ./esqshell/script/build.sh ${{ matrix.os }}
       - name: Release
         uses: tzafrirben/babashka-docker-action@v1.1
