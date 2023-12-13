@@ -24,9 +24,9 @@ tar xfz $BB_ARCHIVE
 # This might help with checks on macos
 which xattr 2>&1 /dev/null && xattr -c bb
 
-# Make uberjar
-./bb uberjar esql.jar -m esql 
+# Make uberjar (note that we're expecting to be in a container with bb present, this is not the bb we downloaded but the bb present on the system)
+bb uberjar esql.jar -m esql 
 
 # Make self-contained executable
-cat bb esql.jar > "esql-$VERSION-SNAPSHOT-$ARCH-$OS"
+cat ./bb esql.jar > "esql-$VERSION-SNAPSHOT-$ARCH-$OS"
 gzip -f "esql-$VERSION-SNAPSHOT-$ARCH-$OS"

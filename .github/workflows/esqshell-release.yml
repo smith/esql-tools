@@ -10,6 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
+        uses: docker://babashka/babashka
         run: ./esqshell/script/build.sh ${{ matrix.os }}
       - name: Release
         uses: tzafrirben/babashka-docker-action@v1.1
