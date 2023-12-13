@@ -30,7 +30,7 @@
                                 :repo "esql-tools"
                                 :file file
                                 :tag (str "v" current-version)
-                                :draft true
+                                :draft false
                                 :overwrite (str/ends-with? current-version "SNAPSHOT")
                                 :sha256 true}))
       (println "Skipping release artifact (no GITHUB_TOKEN or not on main branch)"))
