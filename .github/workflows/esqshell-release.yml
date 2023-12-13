@@ -22,4 +22,5 @@ jobs:
       - name: Release
         env:
           FILE: ${{ steps.build.outputs.FILE }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bb ./script/babashka/release_artifact.clj $FILE
