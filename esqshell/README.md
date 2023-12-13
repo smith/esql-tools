@@ -4,7 +4,7 @@ A shell for [ES|QL](https://www.elastic.co/guide/en/elasticsearch/reference/mast
 
 ## Installation
 
-Download and unpack the latest version for your platform from the [releases](../releases) page. Put it somewhere on you `PATH`.
+Download and unpack the latest version for your platform from the [releases](https://github.com/smith/esql-tools/releases) page. Put it somewhere on you `PATH`.
 
 ## Usage
 
