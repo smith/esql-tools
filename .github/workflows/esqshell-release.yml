@@ -19,6 +19,6 @@ jobs:
         uses: tzafrirben/babashka-docker-action@v1.1
         id: release
         with:
-          bb_src: "esqshell/script/release.clj"
+          bb_src: "esqshell/script/babashka/release_artifact.clj"
       - name: Release output
         run: echo "${{ steps.release.outputs.bb_out }}"
