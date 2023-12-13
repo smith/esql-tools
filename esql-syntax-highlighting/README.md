@@ -1,5 +1,8 @@
 # esql-syntax-highlighting README
 
+*Everything below is the default README generated for this extension*
+*No syntax highlighting for ES|QL has been written, though I might copy the Kusto version from [kuskus](https://github.com/rosshamish/kuskus)*
+
 This is the README for your extension "esql-syntax-highlighting". After writing up a brief description, we recommend including the following sections.
 
 ## Features
