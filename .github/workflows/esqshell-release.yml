@@ -10,13 +10,19 @@ jobs:
         uses: actions/checkout@v2
       # Now we can execute a babashka script from our
       # repository
-      - name: babashka script
+      - name: Build
         uses: tzafrirben/babashka-docker-action@v1.1
-        id: bb_script
+        id: build
         with:
-          bb_src: 'esqshell/script/test.clj'
-          bb_args: '1 2 3'
+          bb_src: 'esqshell/script/build.clj'
       # Print the output of the babashka script from the
       # `bb_script` step 
-      - name: Get the script output
-        run: echo "${{ steps.bb_script.outputs.bb_out }}"
+      - name: Build output
+        run: echo "${{ steps.build.outputs.bb_out }}"
+      - name: Release
+        uses: tzafrirben/babashka-docker-action@v1.1
+        id: release
+        with:
+          bb_src: 'esqshell/script/release.clj'
+      - name: Release output
+        run: echo "${{ steps.release.outputs.bb_out }}"
