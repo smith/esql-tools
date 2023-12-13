@@ -26,6 +26,7 @@ which xattr 2>&1 /dev/null && xattr -c bb
 bb uberjar esql.jar -m esql 
 
 # Make self-contained executable
-cat ./bb esql.jar > "esql-$VERSION-$ARCH-$OS"
-gzip -f "esql-$VERSION-$ARCH-$OS"
-echo "FILE=esql-$VERSION-$ARCH-$OS.gz" >> "$GITHUB_OUTPUT"
+ESQL_BIN="esql-$VERSION-$OS-$ARCH"
+cat ./bb esql.jar > $ESQL_BIN
+gzip -f $ESQL_BIN
+echo "FILE=$ESQL_BIN.gz" >> "$GITHUB_OUTPUT"
