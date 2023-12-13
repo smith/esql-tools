@@ -1,8 +1,6 @@
 on: [push]
 jobs:
   build_and_release_esqshell:
-    permissions:
-        packages: write
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
