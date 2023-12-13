@@ -15,8 +15,6 @@ else
   STATIC="-static"
 fi
 
-cd esqshell || exit
-
 # Get babashka
 BB_ARCHIVE="babashka-$BB_VERSION-$OS-$ARCH$STATIC.tar.gz"
 curl -sLO "https://github.com/babashka/babashka/releases/download/v$BB_VERSION/$BB_ARCHIVE"
