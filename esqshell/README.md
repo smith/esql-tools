@@ -29,3 +29,7 @@ esql -e "FROM logs-* | LIMIT 10" -f json
 ```
 
 Selects 10 items from the `logs-*` index and formats them as JSON. See the ES|QL documentation for more examples.
+
+## Running locally
+
+You'll need [Babashka](https://babashka.org/) installed to run locally. Use `./src/esql.clj` instead of `esql`.
