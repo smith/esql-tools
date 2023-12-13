@@ -1,5 +1,4 @@
-{:paths ["src"]
- :deps {org.zeromq/jeromq		{:mvn/version "0.5.2"}
-        io.github.borkdude/gh-release-artifact {:git/sha "05f8d8659e6805d513c59447ff41dc8497878462"}}
+{:paths ["src" "script"]
+ :deps {io.github.borkdude/gh-release-artifact {:git/sha "05f8d8659e6805d513c59447ff41dc8497878462"}}
  :tasks {release-artifact babashka.release-artifact/release}}
 
