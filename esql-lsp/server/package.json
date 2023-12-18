@@ -1,0 +1,28 @@
+{
+	"name": "lsp-esql",
+	"description": "ES|QL LSP",
+	"version": "1.0.0",
+	"author": "Edoardo Tenani",
+	"license": "MIT",
+	"type":"module",
+	"engines": {
+		"node": "*"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"dependencies": {
+		"antlr4-c3": "^3.3.5",
+		"antlr4ng": "^2.0.4",
+		"vscode-languageserver": "^8.1.0",
+		"vscode-languageserver-textdocument": "^1.0.8"
+	},
+	"scripts": {
+		"generate": "npx antlr4ng -Dlanguage=TypeScript -o ./src/grammar/generated/ -visitor -listener -Xexact-output-dir ./src/grammar/EsqlBaseLexer.g4 ./src/grammar/EsqlBaseParser.g4"
+	},
+	"devDependencies": {
+		"@types/node": "^20.10.5",
+		"antlr4ng-cli": "^1.0.7"
+	}
+}
