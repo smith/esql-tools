@@ -1,0 +1,23 @@
+{
+	"name": "lsp-esql-client",
+	"description": "VSCode client for ES|QL LSP",
+	"author": "Edoardo Tenani",
+	"license": "MIT",
+	"version": "0.0.1",
+	"publisher": "endorama",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"engines": {
+		"vscode": "^1.75.0"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^8.1.0"
+	},
+	"devDependencies": {
+		"@types/glob": "^8.1.0",
+		"@types/vscode": "^1.75.1",
+		"@vscode/test-electron": "^2.2.3"
+	}
+}
